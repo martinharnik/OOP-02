@@ -1,0 +1,2 @@
+In Python, the method resolution order (MRO) determines which method is called when there are multiple methods with the same name in a class hierarchy. The MRO is determined by the C3 linearization algorithm, which Python uses to create a consistent order for method resolution.
+You can inspect the MRO of a class using the __mro__ attribute or the mro() method.

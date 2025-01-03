@@ -14,8 +14,8 @@ class Color():
 
 class Animal(Type, Color):
     def __init__(self, type, color, eat):
-        Type.__init__(self, type)
-        Color.__init__(self, color)
+        Type.__init__(self, type)  # Call the Type constructor
+        Color.__init__(self, color)  # Call the Color constructor
         self.eat = eat
 
     def show_diet(self):
