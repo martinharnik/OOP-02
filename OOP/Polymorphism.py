@@ -24,8 +24,29 @@ class FlightTicket(TravelTicket):
         super().display_ticket_info()
         print(f"Airline: {self.airline}")
 
-# Creating an instance of FlightTicket
-flight_ticket = FlightTicket("NYC", "Prague", "05-12-2025", 7500, "Delta")
+# TrainTicket class inherits from TravelTicket
+class TrainTicket(TravelTicket):
+    # The constructor initializes the attributes of the TrainTicket class
+    def __init__(self, source, destination, date, price, train_name):
+        # Call the constructor of the parent class
+        super().__init__(source, destination, date, price)
+        self.train_name = train_name
+    
+    # Method to display train ticket information, overrides the method in the parent class
+    def display_ticket_info(self):
+        # Call the method from the parent class
+        super().display_ticket_info()
+        print(f"Train name: {self.train_name}")
 
-# Displaying flight ticket information
-flight_ticket.display_ticket_info()
+# Function to display ticket information, demonstrates polymorphism
+def display_ticket_information(ticket):
+    ticket.display_ticket_info()
+
+# Creating instances of FlightTicket and TrainTicket
+flight_ticket = FlightTicket("NYC", "Prague", "05-12-2025", 7500, "Delta")
+train_ticket = TrainTicket("Bratislava", "Praha", "08-07-2025", 1000, "Slovenská strela")
+
+# Displaying ticket information using the same function
+display_ticket_information(flight_ticket)
+print("\n")
+display_ticket_information(train_ticket)
