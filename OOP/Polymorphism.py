@@ -46,7 +46,7 @@ def display_ticket_information(ticket):
 flight_ticket = FlightTicket("NYC", "Prague", "05-12-2025", 7500, "Delta")
 train_ticket = TrainTicket("Bratislava", "Praha", "08-07-2025", 1000, "Slovenská strela")
 
-# Displaying ticket information using the same function
-display_ticket_information(flight_ticket)
-print("\n")
-display_ticket_information(train_ticket)
+tickets = [flight_ticket, train_ticket]
+for ticket in tickets:
+        display_ticket_information(flight_ticket)
+        print("\n")

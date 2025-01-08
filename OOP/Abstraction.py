@@ -35,6 +35,7 @@ class TrainTicket(TravelTicket):
 flight_ticket = FlightTicket("NYC", "Prague", "05-12-2025", 7500, "Delta")
 train_ticket = TrainTicket("Bratislava", "Praha", "08-07-2025", 1000, "Slovenská strela")
 
-flight_ticket.display_ticket_info()
-print("\n")
-train_ticket.display_ticket_info()
+tickets = [flight_ticket, train_ticket]
+for ticket in tickets:
+        ticket.display_ticket_info()
+        print("\n")
